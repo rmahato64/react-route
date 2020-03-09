@@ -1,10 +1,11 @@
 import React, { Component,createRef } from 'react'
-import {BrowserRouter,Route,Link,NavLink,Switch,Prompt,Redirect} from 'react-router-dom'
-import {randomId} from './data/randomId'
-import Posts from './components/Posts'
-import Post from './components/Post'
-import './App.css'
-import AddPost from './components/AddPost'
+import {Route,Link,NavLink,Switch,Prompt,Redirect} from 'react-router-dom'
+import {randomId} from './data/randomId';
+import Posts from './components/Posts';
+import Post from './components/Post';
+import './App.css';
+import AddPost from './components/AddPost';
+import PostDetail from './components/PostDetail';
 
 class App extends Component {
   constructor(props) {
@@ -91,21 +92,41 @@ class App extends Component {
   }
   render () {
   return (
-    <div>
-      <AddPost
-      addPost = {this.addPost}
-      title = {this.state.title}
-      category = {this.state.category}
-      description = {this.state.description}
-      id = {this.state.id}
-      handleChange = {this.handleChange}
-      />
-      <Posts 
-      posts = {this.state.posts}
-      deletePost = {this.deletePost}
-      editPost = {this.editPost}
-      inputTitle = {this.inputTitle}
-      />
+    <div className='App'>
+      <Switch>
+        <Route 
+          exact 
+          path='/newpost' 
+          render={ () => <AddPost 
+            addPost = {this.addPost}
+            title = {this.state.title}
+            category = {this.state.category}
+            description = {this.state.description}
+            id = {this.state.id}
+            handleChange = {this.handleChange}
+            />
+          }
+        />
+        <Route 
+          exact 
+          path='/' 
+          render={ () => <Posts 
+            posts = {this.state.posts}
+            deletePost = {this.deletePost}
+            editPost = {this.editPost}
+            inputTitle = {this.inputTitle}
+            />
+          }
+        />
+        {/* <Route 
+          exact 
+          path={`/post/this.state.id`} 
+          render={ () =>  <PostDetail 
+            posts = {this.state.posts}  
+            />
+          }
+        /> */}
+      </Switch>
     </div>
   )
 }

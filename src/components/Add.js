@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom';
 const Add = ({title,description,category,id,addPost,handleChange}) => {
     return (
         <div>
@@ -14,8 +14,8 @@ const Add = ({title,description,category,id,addPost,handleChange}) => {
                 <textarea type = "text" name = 'description' value = {description} onChange = {handleChange}></textarea>
             </div>
             <div>
-                <button onClick = {() => addPost()}>Add</button>
-                <button>Cancel</button>
+                <Link to='/'><button onClick = {() => addPost()}>Add</button> </Link>
+                <Link to='/'> <button>Cancel</button> </Link>
             </div>
         </div>
     )
