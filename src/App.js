@@ -122,6 +122,7 @@ class App extends Component {
           exact 
           path={`/post/:id`} 
           render={ (props) => {return <ViewPost id={props.match.id}
+          posts={props.posts}
           title = {props.match.title}
           category = {props.match.category}
           description = {props.match.description}
