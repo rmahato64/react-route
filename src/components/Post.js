@@ -11,16 +11,7 @@ const Post = (props) => {
     const {deletePost,editPost,inputTitle} = props
     // const {id,title,category} = props.post
     return (
-        // <BrowserRouter>
-        // <div className = 'home-page-display'>
-        // <NavLink to = {`/post/${id}`}>{title}</NavLink>
-        // <div>{category}</div>
-        // </div>
-        // <Route path = {`/post/${props.post.id}`} component = {()=>{
-        //       return <ViewPost title = {title} category = {category} description = {description} id = {id} deletePost = {deletePost} editPost = {editPost} contentEditable = {contentEditable} inputTitle = {inputTitle}/>
-        //       }}/>
-        
-        // </BrowserRouter>
+  
         
         <div className = 'post-container' id='post-item'>
             <div><Link to = {`/post/${id}`}><h1>{title}</h1></Link></div>
