@@ -1,11 +1,12 @@
 import React from 'react'
 import Delete from './Delete'
 import Edit from './Edit'
+
 const ViewPost = ({title, id, category,description,deletePost,editPost,contentEditable,inputTitle}) => {
     
     return (
-        <div>
-           <div>Id : {id}</div>
+        <div className='post-container'>
+           <div>Id : id = {id}</div>
            <div>Title : {title}</div>
            <div>Category : {category}</div>
            <div>Descri+ption : {description}</div>
@@ -16,4 +17,4 @@ const ViewPost = ({title, id, category,description,deletePost,editPost,contentEd
     )
 }
 
-export default ViewPost
+export default ViewPost;

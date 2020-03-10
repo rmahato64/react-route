@@ -2,10 +2,10 @@ import React, { Component,createRef } from 'react'
 import {Route,Link,NavLink,Switch,Prompt,Redirect} from 'react-router-dom'
 import {randomId} from './data/randomId';
 import Posts from './components/Posts';
-import Post from './components/Post';
 import './App.css';
 import AddPost from './components/AddPost';
 import PostDetail from './components/PostDetail';
+import ViewPost from './components/ViewPost';
 
 class App extends Component {
   constructor(props) {
@@ -25,7 +25,7 @@ class App extends Component {
          
        },
        {
-         id : randomId(),
+         id : 'ff9a44',
          title : 'My talk at React Meetup',
          category : 'Recreation',
          description : 'Hi.. Welcome to my talk at React Meet up.',
@@ -33,7 +33,7 @@ class App extends Component {
          
        },
        {
-         id : randomId(),
+         id : 'I4ox14',
          title : 'Fun at Beach',
          category : 'Recreation',
          description : 'Hi.. Welcome to recreation',
@@ -41,7 +41,7 @@ class App extends Component {
          
        },
        {
-         id : randomId(),
+         id : '15f9a4',
          title : 'Running in the forest',
          category : 'Sport',
          description : 'Hi.. Welcome to sport',
@@ -118,14 +118,15 @@ class App extends Component {
             />
           }
         />
-        {/* <Route 
+        <Route 
           exact 
-          path={`/post/this.state.id`} 
-          render={ () =>  <PostDetail 
-            posts = {this.state.posts}  
-            />
-          }
-        /> */}
+          path={`/post/:id`} 
+          render={ (props) => {return <ViewPost id={props.match.id}
+          title = {props.match.title}
+          category = {props.match.category}
+          description = {props.match.description}
+          handleChange = {this.handleChange}/>}}  
+        />
       </Switch>
     </div>
   )

@@ -3,7 +3,7 @@ import React from 'react'
 const Delete = (props) => {
     const {id,deletePost} = props
     return (
-        <button onClick = {() => deletePost(id)}>Delete</button>
+        <div className='btn delete'><button onClick = {() => deletePost(id)}>Delete</button></div>
     )
 }
 
