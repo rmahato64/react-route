@@ -16,7 +16,7 @@ class App extends Component {
         title : '',
         category : '',
         description : '',
-       
+        isDeleted : false
       },
       posts : [
        {
@@ -58,6 +58,7 @@ class App extends Component {
   }
   
    deletePost = (id) => {
+     this.setState({isDeleted : true})
      const post = {...this.state.post, isDeleted : true}
      this.setState({post})
      const copiedPost = [...this.state.posts]
@@ -75,6 +76,7 @@ class App extends Component {
     editedPost[0].date = date()
     const filteredPost = copiedPost.filter(post =>post.id!==id)
     this.setState({posts : [...editedPost,...filteredPost]})
+    this.setInitial() 
     
   }
   editInput = (id) => {
@@ -99,16 +101,20 @@ class App extends Component {
     const newPost = {...this.state.post,id : randomId(),date : date()}
     const posts = [newPost,...this.state.posts]
     this.setState({posts : posts})    
-    const post ={
-      title : '',
-      category : '',
-      description : '',
-     }
-    this.setState({post})         
+    this.setInitial()         
   }
 
-  render () {
+ setInitial =() => {
+  const post ={
+    title : '',
+    category : '',
+    description : '',
+   }
+  this.setState({post})
+ }
  
+  render () {
+    
   return (
     <div className='App'>
       <Switch>
@@ -151,7 +157,7 @@ class App extends Component {
           handleChange = {this.handleChange}/>}}  
         />
       </Switch>
-    </div>
+    </div> 
   )
 }
 
