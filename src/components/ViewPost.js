@@ -1,18 +1,21 @@
 import React from 'react'
-import Delete from './Delete'
-import Edit from './Edit'
+import {Link} from 'react-router-dom'
 
-const ViewPost = ({title, id, category,description,deletePost,editPost,contentEditable,inputTitle}) => {
+const ViewPost = ({id,posts,deletePost,editInput,}) => {
     
+    const post = posts.filter(post => post.id===id)
+    
+    const {title,category,description} = post[0]
     return (
         <div className='post-container'>
+            <Link to = '/'>Back to posts</Link>
            <div>Id : id = {id}</div>
            <div>Title : {title}</div>
            <div>Category : {category}</div>
-           <div>Descri+ption : {description}</div>
-           <div><input type = "text"  ref = {inputTitle}></input></div>
-           <Delete id = {id} deletePost = {deletePost}/>
-           <Edit id = {id} editPost = {editPost} title = {title} category = {category} description = {description}/>
+           <div>Description : {description}</div>
+           <Link to = '/'><button  className="postBtn" onClick = {()=>deletePost(id)}>Delete</button></Link>
+           <Link to = {`/post/edit/${id}`}><button onClick = {() =>editInput(id)}>Edit</button></Link>
+           
         </div>
     )
 }
