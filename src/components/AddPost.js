@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const AddPost = ({post,addPost,handleChange}) => {
     const {title,category,description} = post
     return (
-        <div className = "post-container">
+        <div className = "form-container">
             <div>
                 <h1>New Post</h1>
             </div>

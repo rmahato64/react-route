@@ -8,8 +8,8 @@ const EditPost = ({id,editPost,handleChange,post}) => {
          Title : <input type = "text" name = 'title' value = {title} onChange = {handleChange}></input>
          Category: <input type = "text" name = 'category' value = {category} onChange = {handleChange}></input>
          Description :<textarea type = "text" name = 'description' value = {description} onChange = {handleChange}></textarea>
-         <Link to = {`/post/${id}`}><button >Cancel</button></Link>
-         <Link to='/'><button onClick = {() => editPost(id)}>Save</button></Link>
+         <Link to = {`/post/${id}`}><button className = 'cancelBtn'>Cancel</button></Link>
+         <Link to='/'><button onClick = {() => editPost(id)} className>Save</button></Link>
          
      </div>
     )

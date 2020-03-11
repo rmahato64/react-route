@@ -13,8 +13,8 @@ const ViewPost = ({id,posts,deletePost,editInput,}) => {
            <div>Title : {title}</div>
            <div>Category : {category}</div>
            <div>Description : {description}</div>
-           <Link to = '/'><button  className="postBtn" onClick = {()=>deletePost(id)}>Delete</button></Link>
-           <Link to = {`/post/edit/${id}`}><button onClick = {() =>editInput(id)}>Edit</button></Link>
+           <Link to = '/'><button  className="deleteBtn" onClick = {()=>deletePost(id)}>Delete</button></Link>
+           <Link to = {`/post/edit/${id}`}><button onClick = {() =>editInput(id)} className = "editBtn">Edit</button></Link>
            
         </div>
     )
