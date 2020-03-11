@@ -23,7 +23,7 @@ class App extends Component {
          title : 'My day in Integrify',
          category : 'work',
          description : 'Hi.. Welcome to my day at Integrify.',
-         
+         date : 'February 4, 2020 13:20:42'
          
        },
        {
@@ -31,6 +31,7 @@ class App extends Component {
          title : 'My talk at React Meetup',
          category : 'Recreation',
          description : 'Hi.. Welcome to my talk at React Meet up.',
+         date : 'February 4, 2020 13:20:42'
          
          
        },
@@ -39,6 +40,7 @@ class App extends Component {
          title : 'Fun at Beach',
          category : 'Recreation',
          description : 'Hi.. Welcome to recreation',
+         date : 'February 4, 2020 13:20:42'
          
          
        },
@@ -47,6 +49,7 @@ class App extends Component {
          title : 'Running in the forest',
          category : 'Sport',
          description : 'Hi.. Welcome to sport',
+         date : 'February 4, 2020 13:20:42'
          
        }
       ]

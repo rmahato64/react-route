@@ -5,7 +5,7 @@ import TagIcon from '../img/icons8-tag.png'
 
 
 const Post = (props) => {
-    const {id,title,category} = props.post
+    const {id,title,category,date} = props.post
 
     return (        
         <div className = 'post-container' id='post-item'>
@@ -18,6 +18,7 @@ const Post = (props) => {
                     <div>
                     <h2>{title}</h2>
                     </div>
+                    <div>{date}</div>
                     </Link>
                 </div>
             

@@ -9,7 +9,6 @@ const ViewPost = ({id,posts,deletePost,editInput,}) => {
     return (
         <div className='post-container'>
             <Link to = '/'>Back to posts</Link>
-           <div>Id : id = {id}</div>
            <div>Title : {title}</div>
            <div>Category : {category}</div>
            <div>Description : {description}</div>
