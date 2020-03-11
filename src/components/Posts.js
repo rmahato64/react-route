@@ -8,7 +8,7 @@ const Posts = (props) => {
     
         return (
             <div >
-                <Link to = '/newpost'><button >Add Post</button></Link>
+                <Link to = '/newpost'><button className='addPost-btn'>New Post</button></Link>
                 <div className='all-post-container'>
                 {postsList}
                 </div>

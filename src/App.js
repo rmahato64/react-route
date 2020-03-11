@@ -1,5 +1,5 @@
 import React, { Component} from 'react'
-import {Route,Switch,Prompt} from 'react-router-dom'
+import {Route,Switch} from 'react-router-dom'
 import {randomId} from './data/randomId';
 import Posts from './components/Posts';
 import './App.css';
@@ -19,7 +19,7 @@ class App extends Component {
       },
       posts : [
        {
-         id : randomId(),
+         id : 'a44gfg',
          title : 'My day in Integrify',
          category : 'work',
          description : 'Hi.. Welcome to my day at Integrify.',

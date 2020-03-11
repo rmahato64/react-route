@@ -11,8 +11,8 @@ const Post = (props) => {
             <div><Link to = {`/post/${id}`}><h1>{title}</h1></Link></div>
             <div className='form-inner'>
                 <div className='input-holder'>{category}</div>
+                </div>
             </div>
-        </div>
     )
 }
 
