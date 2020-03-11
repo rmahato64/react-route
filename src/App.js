@@ -1,6 +1,7 @@
 import React, { Component} from 'react'
 import {Route,Switch} from 'react-router-dom'
 import {randomId} from './data/randomId';
+import {date} from './data/date'
 import Posts from './components/Posts';
 import './App.css';
 import AddPost from './components/AddPost';
@@ -23,7 +24,7 @@ class App extends Component {
          title : 'My day in Integrify',
          category : 'work',
          description : 'Hi.. Welcome to my day at Integrify.',
-         date : 'February 4, 2020 13:20:42'
+         date : 'Jan 1, 2020 11:10:42'
          
        },
        {
@@ -31,7 +32,7 @@ class App extends Component {
          title : 'My talk at React Meetup',
          category : 'Recreation',
          description : 'Hi.. Welcome to my talk at React Meet up.',
-         date : 'February 4, 2020 13:20:42'
+         date : 'Feb 2, 2020 12:20:42'
          
          
        },
@@ -40,7 +41,7 @@ class App extends Component {
          title : 'Fun at Beach',
          category : 'Recreation',
          description : 'Hi.. Welcome to recreation',
-         date : 'February 4, 2020 13:20:42'
+         date : 'Mar 1, 2020 13:30:42'
          
          
        },
@@ -49,7 +50,7 @@ class App extends Component {
          title : 'Running in the forest',
          category : 'Sport',
          description : 'Hi.. Welcome to sport',
-         date : 'February 4, 2020 13:20:42'
+         date : 'Mar 4, 2020 14:40:42'
          
        }
       ]
@@ -67,14 +68,13 @@ class App extends Component {
   editPost = (id) => {
     const copiedPost = [...this.state.posts]
     const {title,category,description} = this.state.post
-    for(const post of copiedPost) {
-      if(post.id===id) {
-        post.title = title
-        post.category = category
-        post.description = description
-        this.setState({posts : copiedPost})
-      }
-    }
+    const editedPost = copiedPost.filter(post => post.id === id)
+    editedPost[0].title = title
+    editedPost[0].category = category
+    editedPost[0].description = description
+    editedPost[0].date = date()
+    const filteredPost = copiedPost.filter(post =>post.id!==id)
+    this.setState({posts : [...editedPost,...filteredPost]})
     
   }
   editInput = (id) => {
@@ -96,12 +96,19 @@ class App extends Component {
    }
 
   addPost = () => {
-    const newPost = {...this.state.post,id : randomId()}
-    const posts = [...this.state.posts,newPost]
-    this.setState({posts : posts})                
+    const newPost = {...this.state.post,id : randomId(),date : date()}
+    const posts = [newPost,...this.state.posts]
+    this.setState({posts : posts})    
+    const post ={
+      title : '',
+      category : '',
+      description : '',
+     }
+    this.setState({post})         
   }
+
   render () {
-    
+ 
   return (
     <div className='App'>
       <Switch>

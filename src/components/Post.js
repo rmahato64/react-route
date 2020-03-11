@@ -18,7 +18,7 @@ const Post = (props) => {
                     <div>
                     <h2>{title}</h2>
                     </div>
-                    <div>{date}</div>
+                    <div>Last Edited Time : {date}</div>
                     </Link>
                 </div>
             
