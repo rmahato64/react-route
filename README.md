@@ -1,4 +1,4 @@
-###### [DEMO](https://sleepy-tereshkova-5cfee5.netlify.com)
+######Demo: [https://sleepy-tereshkova-5cfee5.netlify.com](https://sleepy-tereshkova-5cfee5.netlify.com)
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
