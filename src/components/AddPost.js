@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 
-const AddPost = ({post,addPost,handleChange}) => {
+const AddPost = ({post,addPost,handleChange,setInitial}) => {
     const {title,category,description} = post
     return (
         <div className = 'form-container'>
@@ -23,7 +23,7 @@ const AddPost = ({post,addPost,handleChange}) => {
                 </div>
                 <div>
                     <Link to='/'><button className="postBtn" onClick = {addPost}>Add</button></Link>
-                    <Link to='/'><button className ="cancelBtn">Cancel</button></Link>
+                    <Link to='/'><button className ="cancelBtn" onClick = {setInitial}>Cancel</button></Link>
                 </div>
             </div>        
         </div>

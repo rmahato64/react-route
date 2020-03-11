@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 
-const EditPost = ({id,editPost,handleChange,post}) => {
+const EditPost = ({id,editPost,handleChange,setInitial,post}) => {
     const {title,category,description} = post
     
     return (
@@ -24,7 +24,7 @@ const EditPost = ({id,editPost,handleChange,post}) => {
             </div> 
             <div>
                 <Link to='/'><button className='saveBtn' onClick = {() => editPost(id)}>Save</button></Link>
-                <Link to = {`/post/${id}`}><button className = 'cancelBtn'>Cancel</button></Link>
+                <Link to = {`/post/${id}`} onClick = {setInitial}><button className = 'cancelBtn'>Cancel</button></Link>
             </div>     
         </div>
      </div>

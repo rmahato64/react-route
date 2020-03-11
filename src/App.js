@@ -124,6 +124,7 @@ class App extends Component {
             addPost = {this.addPost}
             post = {this.state.post}
             handleChange = {this.handleChange}
+            setInitial = {this.setInitial}
             />
           }
         />
@@ -153,6 +154,7 @@ class App extends Component {
           render={ (props) => {return <EditPost id={props.match.params.id}
           editPost = {this.editPost}
           post = {this.state.post}
+          setInitial = {this.setInitial}
           handleChange = {this.handleChange}/>}}  
         />
       </Switch>
