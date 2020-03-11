@@ -1,15 +1,7 @@
 .home-page-display {
-<<<<<<< HEAD
-  display: flex;
-  font-size: 22px;
-  justify-content: space-around;
-  align-content: space-around;
-  padding: 2rem;
-=======
     display: flex;
     font-size: 22px;
     justify-content: space-around;
     align-content: space-around;
     padding: 2rem;
->>>>>>> Helmi
 }
