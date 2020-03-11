@@ -3,10 +3,14 @@ import Delete from './Delete'
 import Edit from './Edit'
 
 const ViewPost = ({title, id, category,description,deletePost,editPost,contentEditable,inputTitle}) => {
-    
+
+
+// const ViewPost = (props) => {
+    // const {id,title,category,description,contentEditable} = props.posts
+    // const {deletePost,editPost,inputTitle} = props
     return (
         <div className='post-container'>
-           <div>Id : id = {id}</div>
+           <div>Id : {id}</div>
            <div>Title : {title}</div>
            <div>Category : {category}</div>
            <div>Descri+ption : {description}</div>
