@@ -17,7 +17,7 @@ class App extends Component {
       description : '',
       posts : [
        {
-         id : randomId(),
+         id : 'a44gfg',
          title : 'My day in Integrify',
          category : 'work',
          description : 'Hi.. Welcome to my day at Integrify.',
@@ -121,12 +121,9 @@ class App extends Component {
         <Route 
           exact 
           path={`/post/:id`} 
-          render={ (props) => {return <ViewPost id={props.match.id}
-          posts={props.posts}
-          title = {props.match.title}
-          category = {props.match.category}
-          description = {props.match.description}
-          handleChange = {this.handleChange}/>}}  
+          render={ (props) => {return <ViewPost id={props.match.params.id}
+            posts={this.state.posts}
+          />}}  
         />
       </Switch>
     </div>
