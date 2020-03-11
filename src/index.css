@@ -61,10 +61,6 @@ button, input {
     width: 80%;
 }
 
-<<<<<<< HEAD
-.post-container {
-    
-=======
 .title-child {
     display: flex;
     justify-content: flex-start;
@@ -99,7 +95,6 @@ button, input {
 }
 
 .form-container {
->>>>>>> 90d8248cc0bb90a190e424cb5d9829e00363ee81
     background: white;
     max-width :400px ;
     width: 100%;
