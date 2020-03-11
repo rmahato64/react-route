@@ -1,6 +1,6 @@
 import React from 'react'
 import Add from './Add'
-import {randomId} from '../data/randomId'
+
 const AddPost = (props) => {
     const {title,description,category,id,addPost,handleChange} = props
     return (
@@ -15,9 +15,4 @@ const AddPost = (props) => {
     )
 }
 
-<<<<<<< HEAD
 export default AddPost
-=======
-export default AddPost
-  
->>>>>>> Helmi

@@ -3,11 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Add = ({title,description,category,id,addPost,handleChange}) => {
     return (
-<<<<<<< HEAD
         <div className = "post-container">
-=======
-        <div className = "form-container">
->>>>>>> Helmi
             <div>
                 <h1>New Post</h1>
             </div>
@@ -58,8 +54,4 @@ export default Add
 //     )
 // }
 
-<<<<<<< HEAD
 // export default Add
-=======
-// export default Add
->>>>>>> Helmi

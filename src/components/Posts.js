@@ -8,11 +8,7 @@ const Posts = (props) => {
     
         return (
             <div >
-<<<<<<< HEAD
-                <Link to = '/newpost'><button >Add Post</button></Link>
-=======
                 <Link to = '/newpost'><button className='addPost-btn'>New Post</button></Link>
->>>>>>> Helmi
                 <div className='all-post-container'>
                 {postsList}
                 </div>
@@ -23,8 +19,4 @@ const Posts = (props) => {
 
 }
 
-<<<<<<< HEAD
 export default Posts
-=======
-export default Posts
->>>>>>> Helmi
