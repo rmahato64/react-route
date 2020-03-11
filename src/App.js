@@ -21,9 +21,9 @@ class App extends Component {
          title : 'My day in Integrify',
          category : 'work',
          description : 'Hi.. Welcome to my day at Integrify.',
-         isDeleted : false,
-         
+         isDeleted : false,   
        },
+       
        {
          id : 'ff9a44',
          title : 'My talk at React Meetup',
@@ -123,6 +123,8 @@ class App extends Component {
           path={`/post/:id`} 
           render={ (props) => {return <ViewPost id={props.match.params.id}
             posts={this.state.posts}
+            deletePost = {this.deletePost}
+            editPost = {this.editPost}
           />}}  
         />
       </Switch>

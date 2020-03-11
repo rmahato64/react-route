@@ -1,6 +1,6 @@
-import React from 'react'
-import Add from './Add'
-import {randomId} from '../data/randomId'
+import React from 'react';
+import Add from './Add';
+
 const AddPost = (props) => {
     const {title,description,category,id,addPost,handleChange} = props
     return (
