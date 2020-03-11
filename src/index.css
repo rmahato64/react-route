@@ -39,6 +39,7 @@ button, input {
 
 
 .post-container {
+
     background: white;
     margin: 2% 20%;
     box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.2);
@@ -95,6 +96,7 @@ button, input {
 }
 
 .form-container {
+    
     background: white;
     max-width :400px ;
     width: 100%;
@@ -114,7 +116,8 @@ button, input {
 }
 
 .form-inner {
-    padding : 30px
+    padding : 30px;
+   
 }
 
 .editBtn {
