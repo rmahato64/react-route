@@ -19,6 +19,7 @@ const ViewPost = ({id,posts,deletePost,editInput,}) => {
            }}>Delete</button></Link>
            <Link to = {`/post/edit/${id}`}><button onClick = {() =>editInput(id)} className = "editBtn">Edit</button></Link>
            
+
         </div>
     )
 }
