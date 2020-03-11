@@ -15,4 +15,9 @@ const AddPost = (props) => {
     )
 }
 
+<<<<<<< HEAD
 export default AddPost
+=======
+export default AddPost
+  
+>>>>>>> Helmi

@@ -27,4 +27,8 @@ const PostDetail = (props) => {
 
 }
 
+<<<<<<< HEAD
 export default PostDetail;
+=======
+export default PostDetail;
+>>>>>>> Helmi

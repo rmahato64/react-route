@@ -5,8 +5,13 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+<<<<<<< HEAD
   background-color: whitesmoke;
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url(pic1.jpg);
+=======
+  background-color: rgba(245, 245, 245, 0.452);
+  background-image: url(../src/img/pic1.jpg);
+>>>>>>> Helmi
 
   margin: 50px auto;
 
@@ -15,6 +20,12 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+<<<<<<< HEAD
+=======
+
+  height: 100%;
+  width: 100%;
+>>>>>>> Helmi
 }
 
 code {
@@ -22,6 +33,7 @@ code {
     monospace;
 }
 
+<<<<<<< HEAD
 .all-post-container {
     display: flex;
     justify-content: center;
@@ -39,6 +51,84 @@ code {
     margin: 1rem auto;
    /* box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.2);*/
    box-shadow:
+=======
+button, input {
+    border: none;
+    box-sizing: border-box;
+    background: transparent;
+    padding: 0;
+}
+
+/* .all-post-container {
+    display: flex;
+    justify-content: center;
+} */
+
+
+.post-container {
+    background: white;
+    margin: 2% 20%;
+    box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.2);
+    box-shadow:
+      /* The top layer shadow */
+      0 1px 1px rgba(0,0,0,0.15),
+          /* The second layer */
+      0 10px 0 -5px #eee,
+          /* The second layer shadow */
+      0 10px 1px -4px rgba(0,0,0,0.15),
+          /* The third layer */
+      0 20px 0 -10px #eee,
+          /* The third layer shadow */
+      0 20px 1px -9px rgba(0,0,0,0.15);
+      display: flex;
+      padding: 1rem 2rem;
+}
+
+.title-container {
+    width: 80%;
+}
+
+.title-child {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.title-child img {
+    width: 32px;
+    height: 32px;
+    align-self: center;
+}
+
+.title-child p {
+    align-self: center;
+    padding: 5px;
+    color: #fc6076;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+}
+
+.btn-container div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#form-item {
+    max-width: 400px;
+}
+
+.form-container {
+    background: white;
+    max-width :400px ;
+    width: 100%;
+    margin: auto;
+    box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.2);
+    box-shadow:
+>>>>>>> Helmi
       /* The top layer shadow */
       0 1px 1px rgba(0,0,0,0.15),
           /* The second layer */
@@ -55,16 +145,49 @@ code {
     padding : 30px
 }
 
+<<<<<<< HEAD
 .btn {
     padding: 10px;
     font-size: 22px;
     border: none;
     border-radius: 5px;
     display: inline;
+=======
+.editBtn {
+    padding: 5px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    display: inline-block;
+>>>>>>> Helmi
     background-image: linear-gradient(-20deg, #fc6076 0%, #ff9a44 100%);
     background-blend-mode: multiply;
     color: white;
     background-color: none;
+<<<<<<< HEAD
+=======
+    margin: 5px;
+    width: 5rem;
+    height: 2rem;
+}
+
+.deleteBtn {
+    padding: 5px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    display: inline-block;
+    /* background-image: white; */
+    background-blend-mode: multiply;
+    color: black;
+    margin: 5px;
+    width: 5rem;
+    height: 2rem;
+    box-shadow: 2px 3px 6px 2px rgba(0,0,0,0.1);
+    font-size: 16px;
+    background: transparent;
+    transition: 0.2s;
+>>>>>>> Helmi
 }
 
 h1 {
@@ -75,6 +198,7 @@ h1 {
     #fc4444;
     text-align: center;
     box-shadow: 0 5px 5px 0 rgba(0,0,0,0.1);
+<<<<<<< HEAD
     letter-spacing: 1.4;
    	
 text-shadow: 1px 2px 1px rgba(0,0,0,0.3);
@@ -82,6 +206,15 @@ text-shadow: 1px 2px 1px rgba(0,0,0,0.3);
     
 }
 
+=======
+    letter-spacing: 1.4;	
+    text-shadow: 1px 2px 1px rgba(0,0,0,0.3);   
+}
+
+h2 {
+    margin-bottom: 2rem;
+}
+>>>>>>> Helmi
 
 .input-holder{
     position: relative;
@@ -110,26 +243,47 @@ textarea{
 
 .label {
     position: absolute;
+<<<<<<< HEAD
     	
 text-shadow: 1px 2px 1.5px rgba(0,0,0,0.1);
+=======
+    text-shadow: 3px 2px 5px rgba(0,0,0,0.1);
+>>>>>>> Helmi
     pointer-events:none;
     transition:.2s ease all;
     font-size:  16px;
     color:
+<<<<<<< HEAD
     #fc4444
     ;
+=======
+    #fc4444;
+>>>>>>> Helmi
     top:-18px;
     letter-spacing: 1;
     line-height: 1.4rem;
 
 }
+<<<<<<< HEAD
 .deleteBtn,
 .postBtn,
 .cancelBtn {
+=======
+
+.link {
+    text-decoration: none;
+    color: rgb(26, 25, 25);
+}
+
+.postBtn,
+.cancelBtn,
+.addPost-btn {
+>>>>>>> Helmi
     cursor : pointer;
     border-radius: 3px;
     padding: 15px;
     width: 100%;
+<<<<<<< HEAD
     box-shadow: 0 3px 6px 0 rgba(0,0,0,0.1);
     border: none;
     font-size: 16px;
@@ -157,6 +311,43 @@ text-shadow: 1px 2px 1.5px rgba(0,0,0,0.1);
   }
 .deleteBtn,  
 .postBtn {
+=======
+    box-shadow: 2px 3px 6px 2px rgba(0,0,0,0.1);
+    font-size: 16px;
+    background: transparent;
+    transition: 0.2s;
+    margin: 5px;
+}
+
+.addPost-btn {
+    width: 20%;
+    margin: 1rem;
+}
+
+.deleteBtn:hover,
+.postBtn:hover,
+.cancelBtn:hover,
+.addPost-btn:hover,
+.editBtn:hover {
+    box-shadow: 0 3px 6px 0 rgba(0,0,0,0.4);
+}
+
+.cancelBtn:hover,
+.deleteBtn:hover {
+    color: #fc4444
+ }
+
+/* .deleteBtn:hover, */
+.postBtn:hover,
+.addPost-btn:hover,
+.editBtn:hover {
+    background: linear-gradient(to right, #fc6076 0%, #ff9a44 100%);
+  }
+
+/* .deleteBtn,   */
+.postBtn,
+.addPost-btn {
+>>>>>>> Helmi
     background-image: linear-gradient(-20deg, #fc6076 0%, #ff9a44 100%);
     background-blend-mode: multiply;
     color:white;
@@ -164,7 +355,12 @@ text-shadow: 1px 2px 1.5px rgba(0,0,0,0.1);
 
 .deleteBtn:focus,
 .postBtn:focus,
+<<<<<<< HEAD
 .cancelBtn:focus{
+=======
+.cancelBtn:focus,
+.addPost-btn {
+>>>>>>> Helmi
     outline: 0;
 }
 
@@ -173,4 +369,11 @@ textarea:focus {
     outline: 0;
     border-bottom: 2px solid #ff9a44 ;
     
+<<<<<<< HEAD
+=======
+}
+
+.title-text {
+    margin-bottom: 17px;
+>>>>>>> Helmi
 }

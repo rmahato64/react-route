@@ -121,7 +121,12 @@ class App extends Component {
         <Route 
           exact 
           path={`/post/:id`} 
+<<<<<<< HEAD
           render={ (props) => {return <ViewPost id={props.match.id}
+=======
+          render={ (props) => {return <ViewPost id={props.match.params.id}
+          posts={props.posts}
+>>>>>>> Helmi
           title = {props.match.title}
           category = {props.match.category}
           description = {props.match.description}
@@ -135,3 +140,7 @@ class App extends Component {
 }
 
 export default App
+<<<<<<< HEAD
+=======
+
+>>>>>>> Helmi
