@@ -2,15 +2,31 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 
 const EditPost = ({id,editPost,handleChange,post}) => {
-     const {title,category,description} = post
+    const {title,category,description} = post
+    
     return (
-     <div>
-         Title : <input type = "text" name = 'title' value = {title} onChange = {handleChange}></input>
-         Category: <input type = "text" name = 'category' value = {category} onChange = {handleChange}></input>
-         Description :<textarea type = "text" name = 'description' value = {description} onChange = {handleChange}></textarea>
-         <Link to = {`/post/${id}`}><button className = 'cancelBtn'>Cancel</button></Link>
-         <Link to='/'><button onClick = {() => editPost(id)} className>Save</button></Link>
-         
+    <div className='form-container'>
+        <div>
+            <h1>Edit Post</h1>
+        </div>
+        <div className='form-inner'>
+            <div className='input-holder'>
+                <span className="label">Title :</span> 
+                <input className = "input-text" type = "text" name = 'title' value = {title} onChange = {handleChange}></input>
+            </div>
+            <div className='input-holder'>
+                <span className="label">Category:</span>
+                <input className = "input-text" type = "text" name = 'category' value = {category} onChange = {handleChange}></input>
+            </div>
+            <div className='input-holder'>
+                <span className="label">Description:</span>
+                <textarea className = "input-text" type = "text" name = 'description' value = {description} onChange = {handleChange}></textarea>
+            </div> 
+            <div>
+                <Link to='/'><button className='saveBtn' onClick = {() => editPost(id)}>Save</button></Link>
+                <Link to = {`/post/${id}`}><button className = 'cancelBtn'>Cancel</button></Link>
+            </div>     
+        </div>
      </div>
     )
 }
