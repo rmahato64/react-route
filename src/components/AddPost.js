@@ -12,15 +12,15 @@ const AddPost = ({post,addPost,handleChange,setInitial}) => {
              
             <div className="form-inner">
                  <div className="input-holder">
-                    <p className="label"> Title:</p>
+                    <span className="label"> Title:</span>
                     <input  className = "input-text" type = "text" name = 'title' value = {title} onChange = {handleChange}></input> 
                 </div> 
                 <div className="input-holder">
-                    <p className="label"> Category:</p>
+                    <span className="label"> Category:</span>
                     <input  className = "input-text" type = "text" name = 'category' value = {category} onChange = {handleChange}></input> 
                 </div> 
                 <div className = "input-holder">
-                    <p className="label"> Write new post:</p> 
+                    <span className="label"> Write new post:</span> 
                     <textarea className="input-text" type = "text" name = 'description' value = {description} onChange = {handleChange}></textarea>
                 </div>
                 <div>

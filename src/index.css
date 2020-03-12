@@ -438,7 +438,9 @@ h2 {
   
   .postBtn,
   .cancelBtn,
-  .addPost-btn {
+  .addPost-btn,
+  .backPost-btn,
+  .saveBtn {
       cursor : pointer;
       border-radius: 3px;
       padding: 15px;
@@ -450,7 +452,8 @@ h2 {
       margin: 5px;
   }
   
-  .addPost-btn {
+  .addPost-btn,
+  .backPost-btn {
       width: 20%;
       margin: 1rem;
       z-index: 1;
@@ -460,7 +463,10 @@ h2 {
   .postBtn:hover,
   .cancelBtn:hover,
   .addPost-btn:hover,
-  .editBtn:hover {
+  .backPost-btn,
+  .editBtn:hover,
+  .viewBtn:hover,
+  .saveBtn:hover {
       box-shadow: 0 3px 6px 0 rgba(0,0,0,0.4);
   }
   
@@ -472,13 +478,19 @@ h2 {
   /* .deleteBtn:hover, */
   .postBtn:hover,
   .addPost-btn:hover,
-  .editBtn:hover {
+  .backPost-btn,
+  .editBtn:hover,
+  .viewBtn:hover,
+  .saveBtn:hover {
       background: linear-gradient(to right, #fc6076 0%, #ff9a44 100%);
     }
   
   /* .deleteBtn,   */
   .postBtn,
-  .addPost-btn {
+  .addPost-btn,
+  .backPost-btn,
+  .viewBtn,
+  .saveBtn {
       background-image: linear-gradient(-20deg, #fc6076 0%, #ff9a44 100%);
       background-blend-mode: multiply;
       color:white;
@@ -487,7 +499,10 @@ h2 {
   .deleteBtn:focus,
   .postBtn:focus,
   .cancelBtn:focus,
-  .addPost-btn {
+  .addPost-btn:focus,
+  .backPost-btn,
+  .viewBtn:focus,
+  .saveBtn:focus {
       outline: 0;
   }
   
