@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import TagIcon from '../img/icons8-tag.png'
-import pic1 from '../img/pic1.jpg'
+import TagIcon from '../img/icons8-tag.png';
 
 
 
@@ -15,21 +14,18 @@ const Post = (props) => {
             <div className = "title-container">
             
                 <Link to = {`/post/${id}`} className = "link">
-                <div className='title-child'>
-                <img src = {TagIcon} alt = "tag"></img>
-                <p className='input-holder title-text'>{category}</p>
-                </div>
-                    <div>
-                    <h2>{title}</h2>
+                    <div className='title-child'>
+                        <img src = {TagIcon} alt = "tag"></img>
+                        <p className='input-holder title-text'>{category}</p>
+                        <p id='time'>Last Edited: {date}</p>
                     </div>
-                    <div>{date}</div>
-                    </Link>
-                </div>
-               {/*  <div className = "img-container">
-                <img style ={{width : 400 }} src = {pic1} />
-            </div> */}
+                    <div>
+                        <h2>{title}</h2>
+                    </div>
+                </Link>
             </div>
-           
+            <div className='viewBtn-container'><Link to = {`/post/${id}`} className = "link"><button className='viewBtn'>View</button></Link></div>    
+        </div>
     )
 }
 
