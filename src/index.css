@@ -26,29 +26,27 @@ button, input {
     padding: 0;
 }
 
-
-.logo{
- margin-left: 50px;
- margin-top:10px
-
-  
+.logo {
+    margin-left: 50px;
+    margin-top:10px
 }
-.header{
+
+.header {
     background-color: white;
     margin-top:-50px;
-    box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.2);
-    
+    box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.2);   
     display: flex;
     justify-content: space-between;
     flex-direction: row;
 }
-.header-title{
+
+.header-title {
     padding-top: 10px
 }
-.header-right{
+
+.header-right {
     display:flex;
     justify-content: space-evenly;
-  
 }
 
 .post-container {
@@ -232,7 +230,6 @@ h2 {
 .input-holder{
     position: relative;
     margin-bottom: 25px;    
-
 }
 
 .input-text, textarea {
@@ -260,7 +257,6 @@ button, input {
 .post-container {
     background: white;
     margin: 2% 20%;
-
     box-shadow:
     /* The top layer shadow */
     0 1px 1px rgba(0,0,0,0.15),
@@ -275,7 +271,7 @@ button, input {
     display: flex;
     padding: 1rem 2rem;
     transition: transform .2s;
-  }
+}
 
 .post-container:hover {
     -ms-transform: scale(1.05); /* IE 9 */
@@ -287,7 +283,7 @@ button, input {
 .title-child {
     display: flex;
     justify-content: flex-start;
-  }
+}
   
 .title-child img {
     width: 32px;
@@ -318,7 +314,6 @@ button, input {
 }
 
 .form-container {
-
     background: white;
     max-width :400px ;
     width: 100%;
@@ -385,19 +380,18 @@ button, input {
 }
 
 .OkdeleteBtn {
-cursor : pointer;
-border-radius: 3px;
-padding: 15px;
-width: 100%;
-box-shadow: 2px 3px 6px 2px rgba(0,0,0,0.1);
-font-size: 16px;
-background: transparent;
-transition: 0.2s;
-margin: 5px;
+    cursor : pointer;
+    border-radius: 3px;
+    padding: 15px;
+    width: 100%;
+    box-shadow: 2px 3px 6px 2px rgba(0,0,0,0.1);
+    font-size: 16px;
+    background: transparent;
+    transition: 0.2s;
+    margin: 5px;
 }
 
 h1 {
-    
     font-weight: 700;
     padding:20px;
     color: 
@@ -415,7 +409,6 @@ h2 {
 .input-holder{
     position: relative;
     margin-bottom: 25px;
-
 }
 
 .input-text, textarea {
@@ -427,14 +420,12 @@ h2 {
     color: black;
     top: 18px;
     font-size: 15px;
-
 }
 
 textarea{
     min-height: 160px;
     padding: 15px 0;
     font-size: 15px;
-    
 }
 
 .label {
@@ -448,7 +439,6 @@ textarea{
     top:-18px;
     letter-spacing: 1;
     line-height: 1.4rem;
-
 }
 
 .link {
@@ -471,10 +461,9 @@ textarea{
     background: transparent;
     transition: 0.2s;
     margin: 5px;
-  }
+}
   
 h1 {
-    
     font-weight: 700;
     padding:20px;
     color: 
@@ -504,14 +493,12 @@ h2 {
     color: black;
     top: 18px;
     font-size: 15px;
-
 }
 
 textarea{
     min-height: 160px;
     padding: 15px 0;
     font-size: 15px;
-    
 }
 
 .label {
@@ -525,7 +512,6 @@ textarea{
     top:-18px;
     letter-spacing: 1;
     line-height: 1.4rem;
-
 }
 
 .link {
@@ -549,12 +535,13 @@ textarea{
     transition: 0.2s;
     margin: 5px;
 }
+
 .header .addPost-btn{
-width: 100px;
-margin: 1rem;
-z-index: 1;
-margin-left: 30px;
-margin-right:100px
+    width: 100px;
+    margin: 1rem;
+    z-index: 1;
+    margin-left: 30px;
+    margin-right:100px
 }
 
 .addPost-btn,
@@ -621,7 +608,6 @@ input:focus,
 textarea:focus {
     outline: 0;
     border-bottom: 2px solid #ff9a44 ;
-    
 }
 
 .title-text {
