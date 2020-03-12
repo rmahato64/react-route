@@ -7,6 +7,7 @@ import './App.css';
 import AddPost from './components/AddPost';
 import ViewPost from './components/ViewPost';
 import EditPost from './components/EditPost'
+import DeletePost from './components/DeletePost'
 
 class App extends Component {
   constructor(props) {
@@ -157,6 +158,13 @@ class App extends Component {
           post = {this.state.post}
           setInitial = {this.setInitial}
           handleChange = {this.handleChange}/>}}  
+        />
+          <Route 
+          exact 
+          path={`/post/delete/:id`} 
+          render={ (props) => {return <DeletePost id={props.match.params.id}
+          deletePost = {this.deletePost}
+          />}}  
         />
       </Switch>
     </div> 
