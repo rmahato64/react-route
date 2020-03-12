@@ -1,21 +1,36 @@
-import React from 'react'
-import Delete from './Delete'
-import Edit from './Edit'
+import React from 'react';
+import {Link} from 'react-router-dom';
+import TagIcon from '../img/icons8-tag.png';
 
-const ViewPost = ({id, posts, deletePost, editPost}) => {
 
-    const post = posts.filter(post => post.id === id);
-    const {title, category, description, isDeleted } = post[0]
+const ViewPost = ({id,posts,deletePost,editInput,}) => {
     
+    const post = posts.filter(post => post.id===id)
+    const {title,category,description} = post[0]
     return (
-        <div className='post-container'>
-           <div>Id : {id}</div>
-           <div>Title : {title}</div>
-           <div>Category : {category}</div>
-           <div>Description : {description}</div>
-           <Delete id = {id} deletePost = {deletePost} isDeleted = {isDeleted}/>
-           <Edit id = {id} editPost = {editPost} title = {title} category = {category} description = {description}/>
-          
+        <div>
+            <Link to = '/' ><button className='backPost-btn'>Back to posts</button></Link>
+            <div className='post-container' id='singlepost-container'>
+                    <div className='title-child'>
+                        <img src = {TagIcon} alt = "tag"></img>
+                        <p className='input-holder title-text'>{category}</p>
+                    </div>
+                <div>
+                    <h2>Title : {title}</h2>
+                </div>
+                <div className="input-holder">
+                    <p className="title">Description : </p>
+                    <p className = "text">{description}</p>
+                </div>
+                <div className='btn-container'>
+                <Link to = '/'><button  className="deleteBtn" onClick = {()=> {
+             if(window.confirm('Are You Sure you want to delete this post?')) {
+                deletePost(id)
+             } 
+           }}>Delete</button></Link>
+                    <Link to = {`/post/edit/${id}`}><button onClick = {() =>editInput(id)} className = "editBtn">Edit</button></Link>
+                </div>          
+            </div>
         </div>
     )
 }
