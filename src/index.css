@@ -40,10 +40,14 @@ button, input {
 .header{
     background-color: white;
     margin-top:-50px;
-   
+    box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.2);
+  
 }
 .header-wrapper {
 width: 100%;
+display: flex;
+flex-direction: row;
+justify-content: space-evenly;
 
 
 }

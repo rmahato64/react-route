@@ -10,8 +10,12 @@ const Posts = ({posts,deletePost,editPost}) => {
             <div>
                 <div className="header">
                  <div className="header-wrapper">
+                 <div>
+                 <h2>Number of Posts : {posts.length}</h2>
+                 </div>
+                 <div>
                     <Link to = '/newpost'><button className='addPost-btn'>New Post</button></Link>
-                    <h2>Number of Posts : {posts.length}</h2>
+                    </div>
                 </div>
                 </div>
                
