@@ -3,15 +3,12 @@ import {Link} from 'react-router-dom'
 
 const DeletePost = ({id,deletePost}) => {
     return (
-     <div>
-         <h1>Are you sure you want to delete this post?</h1>
-      <Link to = '/'>
-      <button onClick = {() =>deletePost(id)}>OK</button>
-      </Link>
-      <Link to = {`/post/${id}`}>
-      <button>Cancel</button>
-      </Link>
-      
+     <div className='confirm-container'>
+        <h2>Are you sure you want to delete this post?</h2>
+        <div className='btn-container'>
+            <Link to = '/'><button onClick = {() =>deletePost(id)}>OK</button></Link>
+            <Link to = {`/post/${id}`}><button>Cancel</button></Link>
+        </div>
      </div>
     )
 }
