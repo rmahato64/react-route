@@ -334,6 +334,16 @@ h2 {
             /* The third layer shadow */
         0 20px 1px -9px rgba(0,0,0,0.15);
   }
+
+  .confirm-container {
+      margin: 12% 20%;
+      background-color: white;
+      padding: 4rem;
+  }
+
+  .confirm-title {
+      text-align: center;
+  }
   
   .form-inner {
       padding : 30px
@@ -360,7 +370,6 @@ h2 {
       border: none;
       border-radius: 5px;
       display: inline-block;
-      /* background-image: white; */
       background-blend-mode: multiply;
       color: black;
       margin: 5px;
@@ -370,6 +379,18 @@ h2 {
       font-size: 16px;
       background: transparent;
       transition: 0.2s;
+  }
+
+  .OkdeleteBtn {
+    cursor : pointer;
+    border-radius: 3px;
+    padding: 15px;
+    width: 100%;
+    box-shadow: 2px 3px 6px 2px rgba(0,0,0,0.1);
+    font-size: 16px;
+    background: transparent;
+    transition: 0.2s;
+    margin: 5px;
   }
   
   h1 {
@@ -436,7 +457,8 @@ h2 {
   .cancelBtn,
   .addPost-btn,
   .backPost-btn,
-  .saveBtn {
+  .saveBtn,
+  .cancel-deleteBtn{
       cursor : pointer;
       border-radius: 3px;
       padding: 15px;
@@ -459,15 +481,17 @@ h2 {
   .postBtn:hover,
   .cancelBtn:hover,
   .addPost-btn:hover,
-  .backPost-btn,
+  .backPost-btn:hover,
   .editBtn:hover,
   .viewBtn:hover,
-  .saveBtn:hover {
+  .saveBtn:hover,
+  .cancel-deleteBtn:hover,
+  .OkdeleteBtn:hover {
       box-shadow: 0 3px 6px 0 rgba(0,0,0,0.4);
   }
   
-  .cancelBtn:hover,
-  .deleteBtn:hover {
+  .deleteBtn:hover,
+  .cancelBtn:hover {
       color: #fc4444
    }
   
@@ -477,7 +501,8 @@ h2 {
   .backPost-btn,
   .editBtn:hover,
   .viewBtn:hover,
-  .saveBtn:hover {
+  .saveBtn:hover,
+  .cancel-deleteBtn:hover {
       background: linear-gradient(to right, #fc6076 0%, #ff9a44 100%);
     }
   
@@ -486,7 +511,8 @@ h2 {
   .addPost-btn,
   .backPost-btn,
   .viewBtn,
-  .saveBtn {
+  .saveBtn,
+  .cancel-deleteBtn {
       background-image: linear-gradient(-20deg, #fc6076 0%, #ff9a44 100%);
       background-blend-mode: multiply;
       color:white;
@@ -496,9 +522,11 @@ h2 {
   .postBtn:focus,
   .cancelBtn:focus,
   .addPost-btn:focus,
-  .backPost-btn,
+  .backPost-btn:focus,
   .viewBtn:focus,
-  .saveBtn:focus {
+  .saveBtn:focus,
+  .cancel-deleteBtn:focus,
+  .OkdeleteBtn:focus {
       outline: 0;
   }
   
