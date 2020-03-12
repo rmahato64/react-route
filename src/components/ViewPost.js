@@ -23,11 +23,9 @@ const ViewPost = ({id,posts,deletePost,editInput,}) => {
                     <p className = "text">{description}</p>
                 </div>
                 <div className='btn-container'>
-                <Link to = '/'><button  className="deleteBtn" onClick = {()=> {
-             if(window.confirm('Are You Sure you want to delete this post?')) {
-                deletePost(id)
-             } 
-           }}>Delete</button></Link>
+                   <Link to = {`/post/delete/${id}`}>
+                     <button className = "deleteBtn">Delete</button>
+                    </Link>
                     <Link to = {`/post/edit/${id}`}><button onClick = {() =>editInput(id)} className = "editBtn">Edit</button></Link>
                 </div>          
             </div>
