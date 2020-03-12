@@ -37,7 +37,15 @@ button, input {
     justify-content: center;
 } */
 
+.header{
+    background-color: white;
+   
+}
+.header-wrapper {
+width: 100%;
 
+
+}
 .post-container {
     background: white;
     margin: 2% 20%;
@@ -440,6 +448,7 @@ h2 {
   .addPost-btn {
       width: 20%;
       margin: 1rem;
+      z-index: 1;
   }
   
   .deleteBtn:hover,
