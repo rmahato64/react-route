@@ -1,34 +1,35 @@
 import React from 'react';
-import ViewPost from './ViewPost';
-import { BrowserRouter, NavLink, Route, Switch } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import Delete from './Delete';
-import Edit from './Edit';
 import TagIcon from '../img/icons8-tag.png'
+import pic1 from '../img/pic1.jpg'
+
+
 
 const Post = (props) => {
-    const {id,title,category,description,contentEditable} = props.post
-    const {deletePost,editPost,inputTitle} = props
-    // const {id,title,category} = props.post
+    const {id,title,category,date} = props.post
 
-    return (
-            <div className = 'post-container' id='post-item'>    
-                <div className='title-container'>
-                    <Link to = {`/post/${id}`} className='link'>
-                        <div className='title-child'>
-                            <img src={TagIcon}></img>
-                            <p className='input-holder title-text'>{category} ({id})</p>
-                        </div>
-                        <div>
-                            <h2>{title}</h2>
-                        </div>
+    return (   
+
+        <div className = 'post-container' id='post-item'>
+       
+            <div className = "title-container">
+            
+                <Link to = {`/post/${id}`} className = "link">
+                <div className='title-child'>
+                <img src = {TagIcon} alt = "tag"></img>
+                <p className='input-holder title-text'>{category}</p>
+                </div>
+                    <div>
+                    <h2>{title}</h2>
+                    </div>
+                    <div>{date}</div>
                     </Link>
                 </div>
-                <div className='btn-container'>
-                    <Delete id = {id} deletePost = {deletePost}/>
-                    <Edit id = {id} editPost = {editPost} title = {title} category = {category} description = {description}/>
-                </div>
+               {/*  <div className = "img-container">
+                <img style ={{width : 400 }} src = {pic1} />
+            </div> */}
             </div>
+           
     )
 }
 

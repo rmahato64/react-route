@@ -1,61 +1,64 @@
-import React, { Component,createRef } from 'react'
-import {Route,Link,NavLink,Switch,Prompt,Redirect} from 'react-router-dom'
+import React, { Component} from 'react'
+import {Route,Switch} from 'react-router-dom'
 import {randomId} from './data/randomId';
 import Posts from './components/Posts';
 import './App.css';
 import AddPost from './components/AddPost';
-import PostDetail from './components/PostDetail';
 import ViewPost from './components/ViewPost';
+import EditPost from './components/EditPost'
 
 class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      id : '',
-      title : '',
-      category : '',
-      description : '',
+      post :{
+        title : '',
+        category : '',
+        description : '',
+       
+      },
       posts : [
        {
-         id : randomId(),
+         id : 'a44gfg',
          title : 'My day in Integrify',
          category : 'work',
          description : 'Hi.. Welcome to my day at Integrify.',
-         isDeleted : false,
+         date : 'February 4, 2020 13:20:42'
          
        },
        {
-         id : 'ff9a44',
+         id : randomId(),
          title : 'My talk at React Meetup',
          category : 'Recreation',
          description : 'Hi.. Welcome to my talk at React Meet up.',
-         isDeleted : false,
+         date : 'February 4, 2020 13:20:42'
+         
          
        },
        {
-         id : 'I4ox14',
+         id : randomId(),
          title : 'Fun at Beach',
          category : 'Recreation',
          description : 'Hi.. Welcome to recreation',
-         isDeleted : false,
+         date : 'February 4, 2020 13:20:42'
+         
          
        },
        {
-         id : '15f9a4',
+         id : randomId(),
          title : 'Running in the forest',
          category : 'Sport',
          description : 'Hi.. Welcome to sport',
-         isDeleted : false,
-         contentEditable : false
+         date : 'February 4, 2020 13:20:42'
+         
        }
       ]
     }
   }
-  inputTitle = createRef()
-  category = createRef()
-  description = createRef()
   
    deletePost = (id) => {
+     const post = {...this.state.post, isDeleted : true}
+     this.setState({post})
      const copiedPost = [...this.state.posts]
      const deletedPost = copiedPost.filter(post => post.id!==id)
      this.setState({posts : deletedPost})
@@ -63,34 +66,42 @@ class App extends Component {
    
   editPost = (id) => {
     const copiedPost = [...this.state.posts]
+    const {title,category,description} = this.state.post
     for(const post of copiedPost) {
       if(post.id===id) {
-        console.log(id)
+        post.title = title
+        post.category = category
+        post.description = description
+        this.setState({posts : copiedPost})
       }
     }
     
   }
+  editInput = (id) => {
+    const copiedPost = [...this.state.posts]
+    const post = {}
+    for(const copyPost of copiedPost) {
+      if(copyPost.id === id) {
+        post.title = copyPost.title
+        post.category = copyPost.category
+        post.description = copyPost.description
+      }
+    }
+    this.setState({post})
+  }
    handleChange = (e) => {
      const {name,value} = e.target
-     this.setState({[name] : value})
+     const post = {...this.state.post,[name] : value}
+     this.setState({post})
    }
 
   addPost = () => {
-    const id = randomId()
-    const title = this.state.title
-    const category = this.state.category
-    const description = this.state.description
-    const isDeleted = false
-    const newPost = {id : id,
-                     title : title,
-                     category : category,
-                     description : description,
-                     isDeleted : isDeleted 
-                    }
-    const copiedPost = [...this.state.posts,newPost]
-    this.setState({posts : copiedPost})                
+    const newPost = {...this.state.post,id : randomId()}
+    const posts = [...this.state.posts,newPost]
+    this.setState({posts : posts})                
   }
   render () {
+    
   return (
     <div className='App'>
       <Switch>
@@ -99,10 +110,7 @@ class App extends Component {
           path='/newpost' 
           render={ () => <AddPost 
             addPost = {this.addPost}
-            title = {this.state.title}
-            category = {this.state.category}
-            description = {this.state.description}
-            id = {this.state.id}
+            post = {this.state.post}
             handleChange = {this.handleChange}
             />
           }
@@ -114,7 +122,6 @@ class App extends Component {
             posts = {this.state.posts}
             deletePost = {this.deletePost}
             editPost = {this.editPost}
-            inputTitle = {this.inputTitle}
             />
           }
         />
@@ -122,10 +129,18 @@ class App extends Component {
           exact 
           path={`/post/:id`} 
           render={ (props) => {return <ViewPost id={props.match.params.id}
-          posts={props.posts}
-          title = {props.match.title}
-          category = {props.match.category}
-          description = {props.match.description}
+          posts = {this.state.posts}
+          test = {props}
+          deletePost = {this.deletePost}
+          editInput = {this.editInput}
+          handleChange = {this.handleChange}/>}}  
+        />
+        <Route 
+          exact 
+          path={`/post/edit/:id`} 
+          render={ (props) => {return <EditPost id={props.match.params.id}
+          editPost = {this.editPost}
+          post = {this.state.post}
           handleChange = {this.handleChange}/>}}  
         />
       </Switch>
