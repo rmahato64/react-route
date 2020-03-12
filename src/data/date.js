@@ -44,6 +44,7 @@ const getMonth = num => {
     }
     return month
 }
+
 const twoDigitsDisplay = (number) => {
     if(number < 10) {
         return ('0' + number)
@@ -52,16 +53,15 @@ const twoDigitsDisplay = (number) => {
 }
 
 export const date = () => {
-    const today = new Date()
-    let monthNum = today.getMonth()
-    let month = getMonth(monthNum)
-    let date = twoDigitsDisplay(today.getDate())
-    let year = today.getFullYear()
-    let hours = twoDigitsDisplay(today.getHours())
-    let minutes = twoDigitsDisplay(today.getMinutes())
-    let seconds = twoDigitsDisplay(today.getSeconds())
-    return (`${month} ${date}, ${year} ${hours}:${minutes}:${seconds}`)
-     
+    const today = new Date();
+    let monthNum = today.getMonth();
+    let month = getMonth(monthNum);
+    let date = twoDigitsDisplay(today.getDate());
+    let year = today.getFullYear();
+    let hours = twoDigitsDisplay(today.getHours());
+    let minutes = twoDigitsDisplay(today.getMinutes());
+    let seconds = twoDigitsDisplay(today.getSeconds());
+    return (`${month} ${date}, ${year} ${hours}:${minutes}:${seconds}`);   
 }
 
     

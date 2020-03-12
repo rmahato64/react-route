@@ -1,15 +1,14 @@
-import React from 'react'
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 const AddPost = ({post,addPost,handleChange,setInitial}) => {
     const {title,category,description} = post
-    return (
-        
+    
+    return (  
         <div className = "form-container">
             <div>
                 <h1>New Post</h1>
-            </div>
-             
+            </div>             
             <div className="form-inner">
                  <div className="input-holder">
                     <span className="label"> Title:</span>
@@ -28,12 +27,10 @@ const AddPost = ({post,addPost,handleChange,setInitial}) => {
                     <Link to='/'><button className ="cancelBtn" onClick = {setInitial}>Cancel</button></Link>
                 </div>
             </div>        
-        </div>
-        
-        
+        </div>      
     )
 }
 
-export default AddPost
+export default AddPost;
 
 

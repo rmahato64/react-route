@@ -7,6 +7,7 @@ const ViewPost = ({id,posts,deletePost,editInput,}) => {
     
     const post = posts.filter(post => post.id===id)
     const {title,category,description} = post[0]
+    
     return (
         <div>
             <Link to = '/' ><button className='backPost-btn'>Back to posts</button></Link>
