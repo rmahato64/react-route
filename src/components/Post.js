@@ -7,9 +7,12 @@ import TagIcon from '../img/icons8-tag.png';
 const Post = (props) => {
     const {id,title,category,date} = props.post
 
-    return (        
+    return (   
+
         <div className = 'post-container' id='post-item'>
+       
             <div className = "title-container">
+            
                 <Link to = {`/post/${id}`} className = "link">
                     <div className='title-child'>
                         <img src = {TagIcon} alt = "tag"></img>
