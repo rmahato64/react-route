@@ -37,20 +37,30 @@ button, input {
     justify-content: center;
 } */
 
+.logo{
+ margin-left: 50px;
+ margin-top:10px
+
+  
+}
 .header{
     background-color: white;
     margin-top:-50px;
     box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.2);
+    
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.header-title{
+    padding-top: 10px
+}
+.header-right{
+    display:flex;
+    justify-content: space-evenly;
   
 }
-.header-wrapper {
-width: 100%;
-display: flex;
-flex-direction: row;
-justify-content: space-evenly;
 
-
-}
 .post-container {
     background: white;
     margin: 2% 20%;
@@ -450,6 +460,13 @@ h2 {
       background: transparent;
       transition: 0.2s;
       margin: 5px;
+  }
+  .header .addPost-btn{
+    width: 100px;
+    margin: 1rem;
+    z-index: 1;
+    margin-left: 30px;
+    margin-right:100px
   }
   
   .addPost-btn,
